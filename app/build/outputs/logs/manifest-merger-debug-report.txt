@@ -11,6 +11,8 @@ MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\helmiligi\.gradle
 MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0.aar\c6e33398d423f57287ee2feb9872debd\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.0-beta1] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0-beta1.aar\5a2ca8150b973c01761f69c6a9e94c2e\AndroidManifest.xml:2:1-11:12
 MERGED from [com.firebase:firebase-jobdispatcher:0.7.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\firebase-jobdispatcher-0.7.0.aar\8966f978ee9adf5ff6168434f0c912b4\AndroidManifest.xml:17:1-42:12
+MERGED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\extensions-1.1.1.aar\7725b596f44f381ea587ed3dc8009da7\AndroidManifest.xml:17:1-30:12
+MERGED from [android.arch.persistence.room:runtime:1.0.0-alpha9] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0-alpha9.aar\f8bac14b427243efc2f43292920ca25f\AndroidManifest.xml:17:1-26:12
 MERGED from [com.android.support:support-v4:25.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\support-v4-25.0.0.aar\aba9ffddd718c9aefa88eac1fa09f75d\AndroidManifest.xml:17:1-27:12
 MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\2e8c40599cbaee69fb75c032a6f3b363\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\bbe91b38e25e027844b820a0e8d04cf2\AndroidManifest.xml:17:1-22:12
@@ -30,14 +32,16 @@ MERGED from [com.android.support:support-compat:28.0.0] C:\Users\helmiligi\.grad
 MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\1d7e31c759ed8391aa240f68e66f5ce1\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\da781b3385e3cb50ac2a6af8d1592908\AndroidManifest.xml:17:1-25:12
 MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\203578ebdafb3723ae963cbc87360f99\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\4b939c2d503b4b7bbfef9839f0b70b06\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\5505ea0e3794b07b05041e250a47cd7f\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:print:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\994d4992da713e94f7e876179fe57201\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\651ae67297679c87e88cbd849b11113c\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\a8a66a92c04a5d9fa63ecf920dd763a8\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\d179c92ded16ab8ed3e3c16aa83b1c73\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\a09d80a9caf0bd36a20d39dcb01d3bf2\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\3ce5a04e85b40e0835f4d0219b97b821\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\651ae67297679c87e88cbd849b11113c\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.persistence.room:support-db-impl:1.0.0-alpha9] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\support-db-impl-1.0.0-alpha9.aar\6a80f3fbaea8a0ea782b20dd1cc06147\AndroidManifest.xml:17:1-26:12
+MERGED from [android.arch.persistence.room:support-db:1.0.0-alpha9] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\support-db-1.0.0-alpha9.aar\a0aa1ace02266dd5bfd9bfa771499578\AndroidManifest.xml:17:1-26:12
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\4b939c2d503b4b7bbfef9839f0b70b06\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\5505ea0e3794b07b05041e250a47cd7f\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\994d4992da713e94f7e876179fe57201\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\a8a66a92c04a5d9fa63ecf920dd763a8\AndroidManifest.xml:17:1-22:12
 INJECTED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:17:1-70:12
 INJECTED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:17:1-70:12
 INJECTED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:17:1-70:12
@@ -65,6 +69,8 @@ MERGED from [com.android.support.constraint:constraint-layout:1.1.0-beta1] C:\Us
 MERGED from [com.android.support.constraint:constraint-layout:1.1.0-beta1] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0-beta1.aar\5a2ca8150b973c01761f69c6a9e94c2e\AndroidManifest.xml:9:5-20
 MERGED from [com.firebase:firebase-jobdispatcher:0.7.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\firebase-jobdispatcher-0.7.0.aar\8966f978ee9adf5ff6168434f0c912b4\AndroidManifest.xml:26:5-40:19
 MERGED from [com.firebase:firebase-jobdispatcher:0.7.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\firebase-jobdispatcher-0.7.0.aar\8966f978ee9adf5ff6168434f0c912b4\AndroidManifest.xml:26:5-40:19
+MERGED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\extensions-1.1.1.aar\7725b596f44f381ea587ed3dc8009da7\AndroidManifest.xml:22:5-28:19
+MERGED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\extensions-1.1.1.aar\7725b596f44f381ea587ed3dc8009da7\AndroidManifest.xml:22:5-28:19
 MERGED from [com.android.support:support-v4:25.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\support-v4-25.0.0.aar\aba9ffddd718c9aefa88eac1fa09f75d\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-v4:25.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\support-v4-25.0.0.aar\aba9ffddd718c9aefa88eac1fa09f75d\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-media-compat:25.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.0.0.aar\48f98ff13827001f5f430ee77c415370\AndroidManifest.xml:25:5-20
@@ -157,6 +163,10 @@ MERGED from [com.android.support.constraint:constraint-layout:1.1.0-beta1] C:\Us
 MERGED from [com.android.support.constraint:constraint-layout:1.1.0-beta1] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0-beta1.aar\5a2ca8150b973c01761f69c6a9e94c2e\AndroidManifest.xml:5:5-7:41
 MERGED from [com.firebase:firebase-jobdispatcher:0.7.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\firebase-jobdispatcher-0.7.0.aar\8966f978ee9adf5ff6168434f0c912b4\AndroidManifest.xml:22:5-24:41
 MERGED from [com.firebase:firebase-jobdispatcher:0.7.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\firebase-jobdispatcher-0.7.0.aar\8966f978ee9adf5ff6168434f0c912b4\AndroidManifest.xml:22:5-24:41
+MERGED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\extensions-1.1.1.aar\7725b596f44f381ea587ed3dc8009da7\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\extensions-1.1.1.aar\7725b596f44f381ea587ed3dc8009da7\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.persistence.room:runtime:1.0.0-alpha9] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0-alpha9.aar\f8bac14b427243efc2f43292920ca25f\AndroidManifest.xml:22:5-24:41
+MERGED from [android.arch.persistence.room:runtime:1.0.0-alpha9] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0-alpha9.aar\f8bac14b427243efc2f43292920ca25f\AndroidManifest.xml:22:5-24:41
 MERGED from [com.android.support:support-v4:25.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\support-v4-25.0.0.aar\aba9ffddd718c9aefa88eac1fa09f75d\AndroidManifest.xml:21:5-23:54
 MERGED from [com.android.support:support-v4:25.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\support-v4-25.0.0.aar\aba9ffddd718c9aefa88eac1fa09f75d\AndroidManifest.xml:21:5-23:54
 MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\2e8c40599cbaee69fb75c032a6f3b363\AndroidManifest.xml:20:5-44
@@ -195,22 +205,26 @@ MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\helmiligi\
 MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\da781b3385e3cb50ac2a6af8d1592908\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\203578ebdafb3723ae963cbc87360f99\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\203578ebdafb3723ae963cbc87360f99\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\4b939c2d503b4b7bbfef9839f0b70b06\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\4b939c2d503b4b7bbfef9839f0b70b06\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\5505ea0e3794b07b05041e250a47cd7f\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\5505ea0e3794b07b05041e250a47cd7f\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\994d4992da713e94f7e876179fe57201\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\994d4992da713e94f7e876179fe57201\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\651ae67297679c87e88cbd849b11113c\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\651ae67297679c87e88cbd849b11113c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\a8a66a92c04a5d9fa63ecf920dd763a8\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\a8a66a92c04a5d9fa63ecf920dd763a8\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\d179c92ded16ab8ed3e3c16aa83b1c73\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\d179c92ded16ab8ed3e3c16aa83b1c73\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\a09d80a9caf0bd36a20d39dcb01d3bf2\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\a09d80a9caf0bd36a20d39dcb01d3bf2\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.core:runtime:1.1.1] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\3ce5a04e85b40e0835f4d0219b97b821\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.core:runtime:1.1.1] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\3ce5a04e85b40e0835f4d0219b97b821\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\651ae67297679c87e88cbd849b11113c\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\651ae67297679c87e88cbd849b11113c\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.persistence.room:support-db-impl:1.0.0-alpha9] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\support-db-impl-1.0.0-alpha9.aar\6a80f3fbaea8a0ea782b20dd1cc06147\AndroidManifest.xml:22:5-24:41
+MERGED from [android.arch.persistence.room:support-db-impl:1.0.0-alpha9] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\support-db-impl-1.0.0-alpha9.aar\6a80f3fbaea8a0ea782b20dd1cc06147\AndroidManifest.xml:22:5-24:41
+MERGED from [android.arch.persistence.room:support-db:1.0.0-alpha9] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\support-db-1.0.0-alpha9.aar\a0aa1ace02266dd5bfd9bfa771499578\AndroidManifest.xml:22:5-24:41
+MERGED from [android.arch.persistence.room:support-db:1.0.0-alpha9] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\support-db-1.0.0-alpha9.aar\a0aa1ace02266dd5bfd9bfa771499578\AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\4b939c2d503b4b7bbfef9839f0b70b06\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\4b939c2d503b4b7bbfef9839f0b70b06\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\5505ea0e3794b07b05041e250a47cd7f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\5505ea0e3794b07b05041e250a47cd7f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\994d4992da713e94f7e876179fe57201\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\994d4992da713e94f7e876179fe57201\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\a8a66a92c04a5d9fa63ecf920dd763a8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\a8a66a92c04a5d9fa63ecf920dd763a8\AndroidManifest.xml:20:5-44
 INJECTED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml
 INJECTED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml
 	tools:overrideLibrary
@@ -237,3 +251,13 @@ action#com.google.android.gms.gcm.ACTION_TASK_READY
 ADDED from [com.firebase:firebase-jobdispatcher:0.7.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\firebase-jobdispatcher-0.7.0.aar\8966f978ee9adf5ff6168434f0c912b4\AndroidManifest.xml:37:17-87
 	android:name
 		ADDED from [com.firebase:firebase-jobdispatcher:0.7.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\firebase-jobdispatcher-0.7.0.aar\8966f978ee9adf5ff6168434f0c912b4\AndroidManifest.xml:37:25-84
+provider#android.arch.lifecycle.ProcessLifecycleOwnerInitializer
+ADDED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\extensions-1.1.1.aar\7725b596f44f381ea587ed3dc8009da7\AndroidManifest.xml:23:9-27:43
+	android:authorities
+		ADDED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\extensions-1.1.1.aar\7725b596f44f381ea587ed3dc8009da7\AndroidManifest.xml:25:13-68
+	android:multiprocess
+		ADDED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\extensions-1.1.1.aar\7725b596f44f381ea587ed3dc8009da7\AndroidManifest.xml:27:13-40
+	android:exported
+		ADDED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\extensions-1.1.1.aar\7725b596f44f381ea587ed3dc8009da7\AndroidManifest.xml:26:13-37
+	android:name
+		ADDED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\extensions-1.1.1.aar\7725b596f44f381ea587ed3dc8009da7\AndroidManifest.xml:24:13-83
