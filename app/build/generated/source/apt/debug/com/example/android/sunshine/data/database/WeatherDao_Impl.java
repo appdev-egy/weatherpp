@@ -1,15 +1,20 @@
 package com.example.android.sunshine.data.database;
 
+import android.arch.lifecycle.ComputableLiveData;
+import android.arch.lifecycle.LiveData;
 import android.arch.persistence.db.SupportSQLiteStatement;
 import android.arch.persistence.room.EntityInsertionAdapter;
+import android.arch.persistence.room.InvalidationTracker.Observer;
 import android.arch.persistence.room.RoomDatabase;
 import android.arch.persistence.room.RoomSQLiteQuery;
 import android.database.Cursor;
+import android.support.annotation.NonNull;
 import java.lang.Long;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.util.Date;
+import java.util.Set;
 
 @SuppressWarnings("unchecked")
 public class WeatherDao_Impl implements WeatherDao {
@@ -58,7 +63,7 @@ public class WeatherDao_Impl implements WeatherDao {
   }
 
   @Override
-  public WeatherEntry getWeatherByDate(Date date) {
+  public LiveData<WeatherEntry> getWeatherByDate(Date date) {
     final String _sql = "SELECT * FROM weather WHERE date = ?";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
@@ -69,51 +74,71 @@ public class WeatherDao_Impl implements WeatherDao {
     } else {
       _statement.bindLong(_argIndex, _tmp);
     }
-    final Cursor _cursor = __db.query(_statement);
-    try {
-      final int _cursorIndexOfId = _cursor.getColumnIndexOrThrow("id");
-      final int _cursorIndexOfWeatherIconId = _cursor.getColumnIndexOrThrow("weatherIconId");
-      final int _cursorIndexOfDate = _cursor.getColumnIndexOrThrow("date");
-      final int _cursorIndexOfMin = _cursor.getColumnIndexOrThrow("min");
-      final int _cursorIndexOfMax = _cursor.getColumnIndexOrThrow("max");
-      final int _cursorIndexOfHumidity = _cursor.getColumnIndexOrThrow("humidity");
-      final int _cursorIndexOfPressure = _cursor.getColumnIndexOrThrow("pressure");
-      final int _cursorIndexOfWind = _cursor.getColumnIndexOrThrow("wind");
-      final int _cursorIndexOfDegrees = _cursor.getColumnIndexOrThrow("degrees");
-      final WeatherEntry _result;
-      if(_cursor.moveToFirst()) {
-        final int _tmpId;
-        _tmpId = _cursor.getInt(_cursorIndexOfId);
-        final int _tmpWeatherIconId;
-        _tmpWeatherIconId = _cursor.getInt(_cursorIndexOfWeatherIconId);
-        final Date _tmpDate;
-        final Long _tmp_1;
-        if (_cursor.isNull(_cursorIndexOfDate)) {
-          _tmp_1 = null;
-        } else {
-          _tmp_1 = _cursor.getLong(_cursorIndexOfDate);
+    return new ComputableLiveData<WeatherEntry>() {
+      private Observer _observer;
+
+      @Override
+      protected WeatherEntry compute() {
+        if (_observer == null) {
+          _observer = new Observer("weather") {
+            @Override
+            public void onInvalidated(@NonNull Set<String> tables) {
+              invalidate();
+            }
+          };
+          __db.getInvalidationTracker().addWeakObserver(_observer);
         }
-        _tmpDate = DateConverter.toDate(_tmp_1);
-        final double _tmpMin;
-        _tmpMin = _cursor.getDouble(_cursorIndexOfMin);
-        final double _tmpMax;
-        _tmpMax = _cursor.getDouble(_cursorIndexOfMax);
-        final double _tmpHumidity;
-        _tmpHumidity = _cursor.getDouble(_cursorIndexOfHumidity);
-        final double _tmpPressure;
-        _tmpPressure = _cursor.getDouble(_cursorIndexOfPressure);
-        final double _tmpWind;
-        _tmpWind = _cursor.getDouble(_cursorIndexOfWind);
-        final double _tmpDegrees;
-        _tmpDegrees = _cursor.getDouble(_cursorIndexOfDegrees);
-        _result = new WeatherEntry(_tmpId,_tmpWeatherIconId,_tmpDate,_tmpMin,_tmpMax,_tmpHumidity,_tmpPressure,_tmpWind,_tmpDegrees);
-      } else {
-        _result = null;
+        final Cursor _cursor = __db.query(_statement);
+        try {
+          final int _cursorIndexOfId = _cursor.getColumnIndexOrThrow("id");
+          final int _cursorIndexOfWeatherIconId = _cursor.getColumnIndexOrThrow("weatherIconId");
+          final int _cursorIndexOfDate = _cursor.getColumnIndexOrThrow("date");
+          final int _cursorIndexOfMin = _cursor.getColumnIndexOrThrow("min");
+          final int _cursorIndexOfMax = _cursor.getColumnIndexOrThrow("max");
+          final int _cursorIndexOfHumidity = _cursor.getColumnIndexOrThrow("humidity");
+          final int _cursorIndexOfPressure = _cursor.getColumnIndexOrThrow("pressure");
+          final int _cursorIndexOfWind = _cursor.getColumnIndexOrThrow("wind");
+          final int _cursorIndexOfDegrees = _cursor.getColumnIndexOrThrow("degrees");
+          final WeatherEntry _result;
+          if(_cursor.moveToFirst()) {
+            final int _tmpId;
+            _tmpId = _cursor.getInt(_cursorIndexOfId);
+            final int _tmpWeatherIconId;
+            _tmpWeatherIconId = _cursor.getInt(_cursorIndexOfWeatherIconId);
+            final Date _tmpDate;
+            final Long _tmp_1;
+            if (_cursor.isNull(_cursorIndexOfDate)) {
+              _tmp_1 = null;
+            } else {
+              _tmp_1 = _cursor.getLong(_cursorIndexOfDate);
+            }
+            _tmpDate = DateConverter.toDate(_tmp_1);
+            final double _tmpMin;
+            _tmpMin = _cursor.getDouble(_cursorIndexOfMin);
+            final double _tmpMax;
+            _tmpMax = _cursor.getDouble(_cursorIndexOfMax);
+            final double _tmpHumidity;
+            _tmpHumidity = _cursor.getDouble(_cursorIndexOfHumidity);
+            final double _tmpPressure;
+            _tmpPressure = _cursor.getDouble(_cursorIndexOfPressure);
+            final double _tmpWind;
+            _tmpWind = _cursor.getDouble(_cursorIndexOfWind);
+            final double _tmpDegrees;
+            _tmpDegrees = _cursor.getDouble(_cursorIndexOfDegrees);
+            _result = new WeatherEntry(_tmpId,_tmpWeatherIconId,_tmpDate,_tmpMin,_tmpMax,_tmpHumidity,_tmpPressure,_tmpWind,_tmpDegrees);
+          } else {
+            _result = null;
+          }
+          return _result;
+        } finally {
+          _cursor.close();
+        }
       }
-      return _result;
-    } finally {
-      _cursor.close();
-      _statement.release();
-    }
+
+      @Override
+      protected void finalize() {
+        _statement.release();
+      }
+    }.getLiveData();
   }
 }
