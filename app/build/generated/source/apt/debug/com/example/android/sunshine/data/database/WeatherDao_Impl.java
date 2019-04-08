@@ -8,8 +8,10 @@ import android.database.Cursor;
 import java.lang.Long;
 import java.lang.Override;
 import java.lang.String;
+import java.lang.SuppressWarnings;
 import java.util.Date;
 
+@SuppressWarnings("unchecked")
 public class WeatherDao_Impl implements WeatherDao {
   private final RoomDatabase __db;
 
