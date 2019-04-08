@@ -39,7 +39,7 @@ import java.util.concurrent.TimeUnit;
  */
 public class WeatherNetworkDataSource {
     // The number of days we want our API to return, set to 14 days or two weeks
-    public static final int NUM_DAYS = 14;
+    public static final int NUM_DAYS = 5;
     private static final String LOG_TAG = WeatherNetworkDataSource.class.getSimpleName();
 
     // LiveData storing the latest downloaded weather forecasts

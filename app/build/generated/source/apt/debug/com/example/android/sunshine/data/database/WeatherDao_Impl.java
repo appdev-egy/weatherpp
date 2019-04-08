@@ -7,6 +7,7 @@ import android.arch.persistence.room.EntityInsertionAdapter;
 import android.arch.persistence.room.InvalidationTracker.Observer;
 import android.arch.persistence.room.RoomDatabase;
 import android.arch.persistence.room.RoomSQLiteQuery;
+import android.arch.persistence.room.SharedSQLiteStatement;
 import android.database.Cursor;
 import android.support.annotation.NonNull;
 import java.lang.Long;
@@ -21,6 +22,8 @@ public class WeatherDao_Impl implements WeatherDao {
   private final RoomDatabase __db;
 
   private final EntityInsertionAdapter __insertionAdapterOfWeatherEntry;
+
+  private final SharedSQLiteStatement __preparedStmtOfDeleteOldWeather;
 
   public WeatherDao_Impl(RoomDatabase __db) {
     this.__db = __db;
@@ -49,6 +52,13 @@ public class WeatherDao_Impl implements WeatherDao {
         stmt.bindDouble(9, value.getDegrees());
       }
     };
+    this.__preparedStmtOfDeleteOldWeather = new SharedSQLiteStatement(__db) {
+      @Override
+      public String createQuery() {
+        final String _query = "DELETE FROM weather WHERE date < ?";
+        return _query;
+      }
+    };
   }
 
   @Override
@@ -59,6 +69,27 @@ public class WeatherDao_Impl implements WeatherDao {
       __db.setTransactionSuccessful();
     } finally {
       __db.endTransaction();
+    }
+  }
+
+  @Override
+  public void deleteOldWeather(Date date) {
+    final SupportSQLiteStatement _stmt = __preparedStmtOfDeleteOldWeather.acquire();
+    __db.beginTransaction();
+    try {
+      int _argIndex = 1;
+      final Long _tmp;
+      _tmp = DateConverter.toTimestamp(date);
+      if (_tmp == null) {
+        _stmt.bindNull(_argIndex);
+      } else {
+        _stmt.bindLong(_argIndex, _tmp);
+      }
+      _stmt.executeUpdateDelete();
+      __db.setTransactionSuccessful();
+    } finally {
+      __db.endTransaction();
+      __preparedStmtOfDeleteOldWeather.release(_stmt);
     }
   }
 
@@ -140,5 +171,32 @@ public class WeatherDao_Impl implements WeatherDao {
         _statement.release();
       }
     }.getLiveData();
+  }
+
+  @Override
+  public int countAllFutureWeather(Date date) {
+    final String _sql = "SELECT COUNT(id) FROM weather WHERE date >= ?";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
+    int _argIndex = 1;
+    final Long _tmp;
+    _tmp = DateConverter.toTimestamp(date);
+    if (_tmp == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindLong(_argIndex, _tmp);
+    }
+    final Cursor _cursor = __db.query(_statement);
+    try {
+      final int _result;
+      if(_cursor.moveToFirst()) {
+        _result = _cursor.getInt(0);
+      } else {
+        _result = 0;
+      }
+      return _result;
+    } finally {
+      _cursor.close();
+      _statement.release();
+    }
   }
 }
