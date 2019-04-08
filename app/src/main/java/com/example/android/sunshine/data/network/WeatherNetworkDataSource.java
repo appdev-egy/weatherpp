@@ -15,11 +15,14 @@
  */
 package com.example.android.sunshine.data.network;
 
+import android.arch.lifecycle.LiveData;
+import android.arch.lifecycle.MutableLiveData;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 
 import com.example.android.sunshine.AppExecutors;
+import com.example.android.sunshine.data.database.WeatherEntry;
 import com.firebase.jobdispatcher.Constraint;
 import com.firebase.jobdispatcher.Driver;
 import com.firebase.jobdispatcher.FirebaseJobDispatcher;
@@ -39,6 +42,9 @@ public class WeatherNetworkDataSource {
     public static final int NUM_DAYS = 14;
     private static final String LOG_TAG = WeatherNetworkDataSource.class.getSimpleName();
 
+    // LiveData storing the latest downloaded weather forecasts
+    private final MutableLiveData<WeatherEntry[]> mDownloadedWeatherForecasts;
+
     // Interval at which to sync with the weather. Use TimeUnit for convenience, rather than
     // writing out a bunch of multiplication ourselves and risk making a silly mistake.
     private static final int SYNC_INTERVAL_HOURS = 3;
@@ -56,6 +62,7 @@ public class WeatherNetworkDataSource {
     private WeatherNetworkDataSource(Context context, AppExecutors executors) {
         mContext = context;
         mExecutors = executors;
+        mDownloadedWeatherForecasts = new MutableLiveData<WeatherEntry[]>();
     }
 
     /**
@@ -70,6 +77,10 @@ public class WeatherNetworkDataSource {
             }
         }
         return sInstance;
+    }
+
+    public LiveData<WeatherEntry[]> getCurrentWeatherForecasts() {
+        return mDownloadedWeatherForecasts;
     }
 
     /**
@@ -165,8 +176,7 @@ public class WeatherNetworkDataSource {
                             response.getWeatherForecast()[0].getMin(),
                             response.getWeatherForecast()[0].getMax()));
 
-                    // TODO Finish this method when instructed.
-                    // Will eventually do something with the downloaded data
+                    mDownloadedWeatherForecasts.postValue(response.getWeatherForecast());
                 }
             } catch (Exception e) {
                 // Server probably invalid

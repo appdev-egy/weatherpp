@@ -23,6 +23,7 @@ import android.support.v7.app.AppCompatActivity;
 import com.example.android.sunshine.R;
 import com.example.android.sunshine.data.database.WeatherEntry;
 import com.example.android.sunshine.databinding.ActivityDetailBinding;
+import com.example.android.sunshine.utilities.InjectorUtils;
 import com.example.android.sunshine.utilities.SunshineDateUtils;
 import com.example.android.sunshine.utilities.SunshineWeatherUtils;
 
@@ -61,6 +62,9 @@ public class DetailActivity extends AppCompatActivity {
             // Update the UI
             if (weatherEntry != null) bindWeatherToUI(weatherEntry);
         });
+
+        InjectorUtils.provideRepository(this).initializeData();
+
     }
 
     private void bindWeatherToUI(WeatherEntry weatherEntry) {
