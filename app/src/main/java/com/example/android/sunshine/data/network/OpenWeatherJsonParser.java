@@ -16,6 +16,7 @@
 package com.example.android.sunshine.data.network;
 
 import android.support.annotation.Nullable;
+import android.util.Log;
 
 import com.example.android.sunshine.data.database.WeatherEntry;
 import com.example.android.sunshine.utilities.SunshineDateUtils;
@@ -34,6 +35,11 @@ final class OpenWeatherJsonParser {
 
     // Weather information. Each day's forecast info is an element of the "list" array
     private static final String OWM_LIST = "list";
+    private static final String OWM_DT = "dt";
+    private static final String OWM_MAIN = "main";
+    private static final String OWM_WEATHER_CHILD = "weather";
+    private static final String OWM_CLOUDS = "clouds";
+    private static final String OWM_WIND = "wind";
 
     private static final String OWM_PRESSURE = "pressure";
     private static final String OWM_HUMIDITY = "humidity";
@@ -44,8 +50,8 @@ final class OpenWeatherJsonParser {
     private static final String OWM_TEMPERATURE = "temp";
 
     // Max temperature for the day
-    private static final String OWM_MAX = "max";
-    private static final String OWM_MIN = "min";
+    private static final String OWM_MAX = "temp_max";
+    private static final String OWM_MIN = "temp_min";
 
     private static final String OWM_WEATHER = "weather";
     private static final String OWM_WEATHER_ID = "id";
@@ -53,6 +59,7 @@ final class OpenWeatherJsonParser {
     private static final String OWM_MESSAGE_CODE = "cod";
 
     private static boolean hasHttpError(JSONObject forecastJson) throws JSONException {
+        Log.d("json","\n================================\n" + forecastJson.toString() + "\n================================\n");
         if (forecastJson.has(OWM_MESSAGE_CODE)) {
             int errorCode = forecastJson.getInt(OWM_MESSAGE_CODE);
 
@@ -72,8 +79,8 @@ final class OpenWeatherJsonParser {
     private static WeatherEntry[] fromJson(final JSONObject forecastJson) throws JSONException {
         JSONArray jsonWeatherArray = forecastJson.getJSONArray(OWM_LIST);
 
-        WeatherEntry[] weatherEntries = new WeatherEntry[jsonWeatherArray.length()];
-
+        //WeatherEntry[] weatherEntries = new WeatherEntry[jsonWeatherArray.length()];
+        WeatherEntry[] weatherEntries = new WeatherEntry[WeatherNetworkDataSource.NUM_DAYS];
         /*
          * OWM returns daily forecasts based upon the local time of the city that is being asked
          * for, which means that we need to know the GMT offset to translate this data properly.
@@ -81,16 +88,20 @@ final class OpenWeatherJsonParser {
          * going to take advantage of that to get a nice normalized UTC date for all of our weather.
          */
         long normalizedUtcStartDay = SunshineDateUtils.getNormalizedUtcMsForToday();
-
-        for (int i = 0; i < jsonWeatherArray.length(); i++) {
+        int index = 0;
+        for (int i = 0; i < jsonWeatherArray.length(); i+=8) {
             // Get the JSON object representing the day
             JSONObject dayForecast = jsonWeatherArray.getJSONObject(i);
 
             // Create the weather entry object
             long dateTimeMillis = normalizedUtcStartDay + SunshineDateUtils.DAY_IN_MILLIS * i;
+
+            Log.d("weather_data", "----- Record " + i + " --- " + dayForecast.toString());
             WeatherEntry weather = fromJson(dayForecast, dateTimeMillis);
 
-            weatherEntries[i] = weather;
+
+            weatherEntries[index] = weather;
+            index++;
         }
         return weatherEntries;
     }
@@ -100,28 +111,29 @@ final class OpenWeatherJsonParser {
         // We ignore all the datetime values embedded in the JSON and assume that
         // the values are returned in-order by day (which is not guaranteed to be correct).
 
-        double pressure = dayForecast.getDouble(OWM_PRESSURE);
-        int humidity = dayForecast.getInt(OWM_HUMIDITY);
-        double windSpeed = dayForecast.getDouble(OWM_WINDSPEED);
-        double windDirection = dayForecast.getDouble(OWM_WIND_DIRECTION);
 
+        JSONObject weathermainObject = dayForecast.getJSONObject(OWM_MAIN);
+        JSONObject  weatherchildobject = dayForecast.getJSONArray(OWM_WEATHER_CHILD).getJSONObject(0);
+        JSONObject  windobject = dayForecast.getJSONObject(OWM_WIND);
 
-        // Description is in a child array called "weather", which is 1 element long.
-        // That element also contains a weather code.
-        JSONObject weatherObject =
-                dayForecast.getJSONArray(OWM_WEATHER).getJSONObject(0);
+        double pressure = weathermainObject.getDouble(OWM_PRESSURE);
+        int humidity = weathermainObject.getInt(OWM_HUMIDITY);
+        double windSpeed = windobject.getDouble(OWM_WINDSPEED);
+        double windDirection = windobject.getDouble(OWM_WIND_DIRECTION);
+        int weatherId = weatherchildobject.getInt(OWM_WEATHER_ID);
 
-        int weatherId = weatherObject.getInt(OWM_WEATHER_ID);
+        double max = weathermainObject.getDouble(OWM_MAX);
+        double min = weathermainObject.getDouble(OWM_MIN);
+        Log.d("weather_data", "----- max " + max + " --- min " + min);
 
-
-        //  Temperatures are sent by Open Weather Map in a child object called "temp".
-        JSONObject temperatureObject = dayForecast.getJSONObject(OWM_TEMPERATURE);
-        double max = temperatureObject.getDouble(OWM_MAX);
-        double min = temperatureObject.getDouble(OWM_MIN);
+        long daytime = dayForecast.getLong(OWM_DT);
+        Log.d("timetag","--> " + String.valueOf(new Date(daytime * 1000)));
+        //return new WeatherEntry(weatherId, new Date(daytime), max, min,
+        //               humidity, pressure, windSpeed, windDirection);
 
         // Create the weather entry object
-        return new WeatherEntry(weatherId, new Date(dateTimeMillis), max, min,
-                humidity, pressure, windSpeed, windDirection);
+        return new WeatherEntry(weatherId, new Date(daytime * 1000), max, min,
+               humidity, pressure, windSpeed, windDirection);
     }
 
     /**

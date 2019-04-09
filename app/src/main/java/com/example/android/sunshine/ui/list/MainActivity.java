@@ -42,7 +42,6 @@ public class MainActivity extends AppCompatActivity implements
     private int mPosition = RecyclerView.NO_POSITION;
     private ProgressBar mLoadingIndicator;
     private MainActivityViewModel mViewModel;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -88,6 +87,16 @@ public class MainActivity extends AppCompatActivity implements
          * change the child layout size in the RecyclerView
          */
         mRecyclerView.setHasFixedSize(true);
+
+
+        ///////////////////////
+
+        // mForecastResponse = new DailyForecastResponse();
+        // ArrayList<String> citydata =  mForecastResponse.getForecast("London");
+        //for(String city:citydata)
+        //    Log.d("temptest", "========== " + city);
+
+        //////////////////////
 
         /*
          * The ForecastAdapter is responsible for linking our weather data with the Views that

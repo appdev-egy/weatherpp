@@ -165,8 +165,8 @@ class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.ForecastAdapt
         String lowA11y = mContext.getString(R.string.a11y_low_temp, lowString);
 
          /* Set the text and content description (for accessibility purposes) */
-        forecastAdapterViewHolder.lowTempView.setText(lowString);
-        forecastAdapterViewHolder.lowTempView.setContentDescription(lowA11y);
+        //forecastAdapterViewHolder.lowTempView.setText(lowString);
+        //forecastAdapterViewHolder.lowTempView.setContentDescription(lowA11y);
     }
 
     /**
@@ -310,7 +310,7 @@ class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.ForecastAdapt
         final TextView dateView;
         final TextView descriptionView;
         final TextView highTempView;
-        final TextView lowTempView;
+        //final TextView lowTempView;
 
         ForecastAdapterViewHolder(View view) {
             super(view);
@@ -319,7 +319,7 @@ class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.ForecastAdapt
             dateView = view.findViewById(R.id.date);
             descriptionView = view.findViewById(R.id.weather_description);
             highTempView = view.findViewById(R.id.high_temperature);
-            lowTempView = view.findViewById(R.id.low_temperature);
+            //lowTempView = view.findViewById(R.id.low_temperature);
 
             view.setOnClickListener(this);
         }

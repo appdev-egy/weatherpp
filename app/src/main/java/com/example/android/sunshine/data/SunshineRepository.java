@@ -55,6 +55,8 @@ public class SunshineRepository {
                 deleteOldData();
                 Log.d(LOG_TAG, "Old weather deleted");
                 // Insert our new weather data into Sunshine's database
+
+
                 mWeatherDao.bulkInsert(newForecastsFromNetwork);
                 Log.d(LOG_TAG, "New values inserted");
             });

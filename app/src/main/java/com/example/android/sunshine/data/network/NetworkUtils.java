@@ -47,9 +47,9 @@ final class NetworkUtils {
             "https://andfun-weather.udacity.com/weather";
 
     private static final String STATIC_WEATHER_URL =
-            "https://andfun-weather.udacity.com/staticweather";
+            "https://api.openweathermap.org/data/2.5/forecast?q=London,uk&units=metric&appid=18b6a811bc089d7b71cde862f2c743e4";
 
-    private static final String FORECAST_BASE_URL = DYNAMIC_WEATHER_URL;
+    private static final String FORECAST_BASE_URL = STATIC_WEATHER_URL;
 
     /*
      * NOTE: These values only effect responses from OpenWeatherMap, NOT from the fake weather
@@ -81,7 +81,14 @@ final class NetworkUtils {
      */
     static URL getUrl() {
         String locationQuery = "Mountain View, CA";
-        return buildUrlWithLocationQuery(locationQuery);
+        //return buildUrlWithLocationQuery(locationQuery);
+         try {
+            URL weatherQueryUrl = new URL(FORECAST_BASE_URL);
+            return weatherQueryUrl;
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
     /**

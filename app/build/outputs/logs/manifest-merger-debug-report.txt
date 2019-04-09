@@ -6,6 +6,7 @@ INJECTED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:1
 INJECTED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:17:1-70:12
 MERGED from [com.android.databinding:adapters:3.3.2] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\adapters-3.3.2.aar\9ca130efdcd5d985c6e941cd3ab72c13\AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.databinding:library:3.3.2] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\library-3.3.2.aar\acd5f01a2c1ec89be131b101eed09407\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:multidex:1.0.2] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\multidex-1.0.2.aar\4291c481ecfb820ea9ea248d6077c09b\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:preference-v7:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\preference-v7-28.0.0.aar\e995a8c4d1451152cc22b4d54ce053f7\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\25e097e6aaaf21367cb75addf2354edc\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0.aar\c6e33398d423f57287ee2feb9872debd\AndroidManifest.xml:17:1-22:12
@@ -153,6 +154,8 @@ MERGED from [com.android.databinding:adapters:3.3.2] C:\Users\helmiligi\.gradle\
 MERGED from [com.android.databinding:adapters:3.3.2] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\adapters-3.3.2.aar\9ca130efdcd5d985c6e941cd3ab72c13\AndroidManifest.xml:22:5-44
 MERGED from [com.android.databinding:library:3.3.2] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\library-3.3.2.aar\acd5f01a2c1ec89be131b101eed09407\AndroidManifest.xml:22:5-44
 MERGED from [com.android.databinding:library:3.3.2] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\library-3.3.2.aar\acd5f01a2c1ec89be131b101eed09407\AndroidManifest.xml:22:5-44
+MERGED from [com.android.support:multidex:1.0.2] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\multidex-1.0.2.aar\4291c481ecfb820ea9ea248d6077c09b\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:multidex:1.0.2] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\multidex-1.0.2.aar\4291c481ecfb820ea9ea248d6077c09b\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:preference-v7:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\preference-v7-28.0.0.aar\e995a8c4d1451152cc22b4d54ce053f7\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:preference-v7:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\preference-v7-28.0.0.aar\e995a8c4d1451152cc22b4d54ce053f7\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\25e097e6aaaf21367cb75addf2354edc\AndroidManifest.xml:20:5-44

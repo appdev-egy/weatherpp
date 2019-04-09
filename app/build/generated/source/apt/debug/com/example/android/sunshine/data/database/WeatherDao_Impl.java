@@ -32,7 +32,7 @@ public class WeatherDao_Impl implements WeatherDao {
     this.__insertionAdapterOfWeatherEntry = new EntityInsertionAdapter<WeatherEntry>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR REPLACE INTO `weather`(`id`,`weatherIconId`,`date`,`min`,`max`,`humidity`,`pressure`,`wind`,`degrees`) VALUES (nullif(?, 0),?,?,?,?,?,?,?,?)";
+        return "INSERT OR ABORT INTO `weather`(`id`,`weatherIconId`,`date`,`min`,`max`,`humidity`,`pressure`,`wind`,`degrees`) VALUES (nullif(?, 0),?,?,?,?,?,?,?,?)";
       }
 
       @Override
@@ -65,6 +65,17 @@ public class WeatherDao_Impl implements WeatherDao {
 
   @Override
   public void bulkInsert(WeatherEntry... weather) {
+    __db.beginTransaction();
+    try {
+      __insertionAdapterOfWeatherEntry.insert(weather);
+      __db.setTransactionSuccessful();
+    } finally {
+      __db.endTransaction();
+    }
+  }
+
+  @Override
+  public void Insert(WeatherEntry weather) {
     __db.beginTransaction();
     try {
       __insertionAdapterOfWeatherEntry.insert(weather);
