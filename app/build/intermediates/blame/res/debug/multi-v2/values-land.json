@@ -14,6 +14,25 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\helmiligi\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\829b261509f980a5e27d3c95facf53a6\\res\\values-land\\values-land.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "10",
+                        "endOffsets": "222"
+                    },
+                    "to": {
+                        "startLines": "7",
+                        "startColumns": "4",
+                        "startOffsets": "394",
+                        "endLines": "10",
+                        "endColumns": "10",
+                        "endOffsets": "561"
+                    }
+                },
+                {
                     "source": "C:\\Users\\helmiligi\\Desktop\\arch\\app\\src\\main\\res\\values-land\\dimens.xml",
                     "from": {
                         "startLines": "19,20",

@@ -1,19 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-     Copyright (C) 2016 The Android Open Source Project
-
-     Licensed under the Apache License, Version 2.0 (the "License");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
-
-          http://www.apache.org/licenses/LICENSE-2.0
-
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an "AS IS" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
--->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.android.sunshine"
     android:targetSandboxVersion="2"
@@ -23,7 +8,6 @@
     <uses-sdk
         android:minSdkVersion="17"
         android:targetSdkVersion="28" />
-
     <!-- This permission is necessary in order for Sunshine to perform network access. -->
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -35,15 +19,12 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:testOnly="true"
-        android:theme="@style/AppTheme" >
-
-        <!-- The manifest entry for our MainActivity. Each Activity requires a manifest entry -->
+        android:testOnly="true" >
         <activity
-            android:name="com.example.android.sunshine.ui.list.MainActivity"
-            android:label="@string/app_name"
+            android:name="com.example.android.sunshine.ui.main.CityMainActivity"
+            android:label="@string/title_activity_city_main"
             android:launchMode="singleTop"
-            android:theme="@style/AppTheme.Forecast" >
+            android:theme="@style/Theme.MaterialComponents.Light.DarkActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -51,7 +32,13 @@
             </intent-filter>
         </activity>
 
-        <!-- The manifest entry for our DetailActivity. Each Activity requires a manifest entry -->
+        <!-- The manifest entry for our MainActivity. Each Activity requires a manifest entry -->
+        <activity
+            android:name="com.example.android.sunshine.ui.list.MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.Forecast" >
+        </activity> <!-- The manifest entry for our DetailActivity. Each Activity requires a manifest entry -->
         <activity
             android:name="com.example.android.sunshine.ui.detail.DetailActivity"
             android:label="@string/title_activity_detail"
@@ -60,14 +47,10 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.list.MainActivity" />
-        </activity>
-
-        <!-- This is required for immediate syncs -->
+        </activity> <!-- This is required for immediate syncs -->
         <service
             android:name="com.example.android.sunshine.data.network.SunshineSyncIntentService"
-            android:exported="false" />
-
-        <!-- This is the Service declaration used in conjunction with FirebaseJobDispatcher -->
+            android:exported="false" /> <!-- This is the Service declaration used in conjunction with FirebaseJobDispatcher -->
         <service
             android:name="com.example.android.sunshine.data.network.SunshineFirebaseJobService"
             android:exported="false" >
@@ -75,7 +58,6 @@
                 <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
             </intent-filter>
         </service>
-
         <!--
              Receives GooglePlay execution requests and forwards them to the
              appropriate internal service.

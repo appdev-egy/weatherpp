@@ -1,16 +1,17 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:17:1-70:12
-INJECTED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:17:1-70:12
-INJECTED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:17:1-70:12
-INJECTED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:17:1-70:12
+ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:2:1-52:12
+INJECTED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:2:1-52:12
+INJECTED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:2:1-52:12
+INJECTED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:2:1-52:12
 MERGED from [com.android.databinding:adapters:3.3.2] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\adapters-3.3.2.aar\9ca130efdcd5d985c6e941cd3ab72c13\AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.databinding:library:3.3.2] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\library-3.3.2.aar\acd5f01a2c1ec89be131b101eed09407\AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.support:multidex:1.0.2] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\multidex-1.0.2.aar\4291c481ecfb820ea9ea248d6077c09b\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:preference-v7:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\preference-v7-28.0.0.aar\e995a8c4d1451152cc22b4d54ce053f7\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:design:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\829b261509f980a5e27d3c95facf53a6\AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\25e097e6aaaf21367cb75addf2354edc\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0.aar\c6e33398d423f57287ee2feb9872debd\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support.constraint:constraint-layout:1.1.0-beta1] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0-beta1.aar\5a2ca8150b973c01761f69c6a9e94c2e\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\bd7122505e694aa581a08ff60a783dc6\AndroidManifest.xml:2:1-11:12
 MERGED from [com.firebase:firebase-jobdispatcher:0.7.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\firebase-jobdispatcher-0.7.0.aar\8966f978ee9adf5ff6168434f0c912b4\AndroidManifest.xml:17:1-42:12
 MERGED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\extensions-1.1.1.aar\7725b596f44f381ea587ed3dc8009da7\AndroidManifest.xml:17:1-30:12
 MERGED from [com.android.support:support-v4:25.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\support-v4-25.0.0.aar\aba9ffddd718c9aefa88eac1fa09f75d\AndroidManifest.xml:17:1-27:12
@@ -22,6 +23,7 @@ MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\helmiligi\.
 MERGED from [com.android.support:loader:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\31d55cacf88911ed4ff7b2bad9465347\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\651ae67297679c87e88cbd849b11113c\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\f51c3cc64ed686b0a74975d698d93e8b\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\transition-28.0.0.aar\4118cdc8c0df89fd08362e3918972316\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:viewpager:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\1c3890e47744ce302d12d47eb30dfafb\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\b1a15330d64363293fe921f653dc9e16\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\7485ff4617b8d73bd38bd4b626de3f9f\AndroidManifest.xml:17:1-22:12
@@ -39,35 +41,38 @@ MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\helmiligi\.gra
 MERGED from [android.arch.core:runtime:1.1.1] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\3ce5a04e85b40e0835f4d0219b97b821\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.persistence:db-framework:1.1.1] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\db-framework-1.1.1.aar\5462007bf8001e1b4b9149e13e4a1d11\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.persistence:db:1.1.1] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\db-1.1.1.aar\027c3cee5c3e804962b7da8b1523c2f0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\cardview-v7-28.0.0.aar\971fe10bb9f857b98f5b29b4f14a91e5\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:documentfile:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\4b939c2d503b4b7bbfef9839f0b70b06\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\5505ea0e3794b07b05041e250a47cd7f\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:print:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\994d4992da713e94f7e876179fe57201\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:interpolator:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\a8a66a92c04a5d9fa63ecf920dd763a8\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:17:1-70:12
-INJECTED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:17:1-70:12
-INJECTED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:17:1-70:12
+INJECTED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:2:1-52:12
+INJECTED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:2:1-52:12
+INJECTED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:2:1-52:12
 	package
-		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:19:5-43
+		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:3:5-43
 		INJECTED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:17:1-70:12
+		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:2:1-52:12
 		INJECTED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:17:1-70:12
+		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:2:1-52:12
 		INJECTED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:18:5-63
+		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:22:5-66
+ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:5:5-67
 	android:name
-		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:22:22-64
+		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:5:22-64
 application
-ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:24:5-69:19
-MERGED from [com.android.support.constraint:constraint-layout:1.1.0-beta1] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0-beta1.aar\5a2ca8150b973c01761f69c6a9e94c2e\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.0-beta1] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0-beta1.aar\5a2ca8150b973c01761f69c6a9e94c2e\AndroidManifest.xml:9:5-20
+ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:7:5-50:19
+MERGED from [com.android.support:design:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\829b261509f980a5e27d3c95facf53a6\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\829b261509f980a5e27d3c95facf53a6\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\bd7122505e694aa581a08ff60a783dc6\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\bd7122505e694aa581a08ff60a783dc6\AndroidManifest.xml:9:5-20
 MERGED from [com.firebase:firebase-jobdispatcher:0.7.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\firebase-jobdispatcher-0.7.0.aar\8966f978ee9adf5ff6168434f0c912b4\AndroidManifest.xml:26:5-40:19
 MERGED from [com.firebase:firebase-jobdispatcher:0.7.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\firebase-jobdispatcher-0.7.0.aar\8966f978ee9adf5ff6168434f0c912b4\AndroidManifest.xml:26:5-40:19
 MERGED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\extensions-1.1.1.aar\7725b596f44f381ea587ed3dc8009da7\AndroidManifest.xml:22:5-28:19
@@ -83,69 +88,77 @@ MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\helmiligi\
 	android:appComponentFactory
 		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\8b3e924f1a5dec0b65574abea8b1a7bb\AndroidManifest.xml:22:18-91
 	android:supportsRtl
-		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:28:9-35
+		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:11:9-35
 	android:label
-		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:27:9-41
+		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:10:9-41
 	android:icon
-		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:26:9-43
+		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:9:9-43
 	android:allowBackup
-		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:25:9-35
-	android:theme
-		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:29:9-40
-activity#com.example.android.sunshine.ui.list.MainActivity
-ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:32:9-41:20
+		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:8:9-35
+activity#com.example.android.sunshine.ui.main.CityMainActivity
+ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:13:9-22:20
 	android:label
-		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:34:13-45
+		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:15:13-61
 	android:launchMode
-		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:35:13-43
+		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:16:13-43
 	android:theme
-		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:36:13-53
+		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:17:13-80
 	android:name
-		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:33:13-49
+		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:14:13-53
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:37:13-40:29
+ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:18:13-21:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:38:17-68
+ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:19:17-69
 	android:name
-		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:38:25-66
+		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:19:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:39:17-76
+ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:20:17-77
 	android:name
-		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:39:27-74
-activity#com.example.android.sunshine.ui.detail.DetailActivity
-ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:44:9-52:20
-	android:parentActivityName
-		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:47:13-63
+		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:20:27-74
+activity#com.example.android.sunshine.ui.list.MainActivity
+ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:25:9-30:20
 	android:label
-		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:46:13-58
+		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:27:13-45
+	android:launchMode
+		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:28:13-43
 	android:theme
-		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:48:13-44
+		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:29:13-53
 	android:name
-		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:45:13-53
+		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:26:13-49
+activity#com.example.android.sunshine.ui.detail.DetailActivity
+ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:31:9-39:20
+	android:parentActivityName
+		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:34:13-63
+	android:label
+		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:33:13-58
+	android:theme
+		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:35:13-44
+	android:name
+		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:32:13-53
 meta-data#android.support.PARENT_ACTIVITY
-ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:49:13-51:56
+ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:36:13-38:57
 	android:value
-		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:51:17-54
+		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:38:17-54
 	android:name
-		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:50:17-63
+		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:37:17-63
 service#com.example.android.sunshine.data.network.SunshineSyncIntentService
-ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:56:9-58:40
+ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:40:9-42:40
 	android:exported
-		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:58:13-37
+		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:42:13-37
 	android:name
-		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:57:13-67
+		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:41:13-67
 service#com.example.android.sunshine.data.network.SunshineFirebaseJobService
-ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:61:9-67:19
+ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:43:9-49:19
 	android:exported
-		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:63:13-37
+		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:45:13-37
 	android:name
-		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:62:13-68
+		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:44:13-68
 intent-filter#action:name:com.firebase.jobdispatcher.ACTION_EXECUTE
-ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:64:13-66:29
+ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:46:13-48:29
 action#com.firebase.jobdispatcher.ACTION_EXECUTE
-ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:65:17-83
+ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:47:17-84
 	android:name
-		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:65:25-81
+		ADDED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml:47:25-81
 uses-sdk
 INJECTED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\helmiligi\Desktop\arch\app\src\main\AndroidManifest.xml
@@ -158,12 +171,14 @@ MERGED from [com.android.support:multidex:1.0.2] C:\Users\helmiligi\.gradle\cach
 MERGED from [com.android.support:multidex:1.0.2] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\multidex-1.0.2.aar\4291c481ecfb820ea9ea248d6077c09b\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:preference-v7:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\preference-v7-28.0.0.aar\e995a8c4d1451152cc22b4d54ce053f7\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:preference-v7:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\preference-v7-28.0.0.aar\e995a8c4d1451152cc22b4d54ce053f7\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\829b261509f980a5e27d3c95facf53a6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\829b261509f980a5e27d3c95facf53a6\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\25e097e6aaaf21367cb75addf2354edc\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\25e097e6aaaf21367cb75addf2354edc\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0.aar\c6e33398d423f57287ee2feb9872debd\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0.aar\c6e33398d423f57287ee2feb9872debd\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support.constraint:constraint-layout:1.1.0-beta1] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0-beta1.aar\5a2ca8150b973c01761f69c6a9e94c2e\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.1.0-beta1] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0-beta1.aar\5a2ca8150b973c01761f69c6a9e94c2e\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\bd7122505e694aa581a08ff60a783dc6\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\bd7122505e694aa581a08ff60a783dc6\AndroidManifest.xml:5:5-7:41
 MERGED from [com.firebase:firebase-jobdispatcher:0.7.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\firebase-jobdispatcher-0.7.0.aar\8966f978ee9adf5ff6168434f0c912b4\AndroidManifest.xml:22:5-24:41
 MERGED from [com.firebase:firebase-jobdispatcher:0.7.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\firebase-jobdispatcher-0.7.0.aar\8966f978ee9adf5ff6168434f0c912b4\AndroidManifest.xml:22:5-24:41
 MERGED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\extensions-1.1.1.aar\7725b596f44f381ea587ed3dc8009da7\AndroidManifest.xml:20:5-44
@@ -186,6 +201,8 @@ MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\helmiligi\.gradle\
 MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\651ae67297679c87e88cbd849b11113c\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\f51c3cc64ed686b0a74975d698d93e8b\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\f51c3cc64ed686b0a74975d698d93e8b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\transition-28.0.0.aar\4118cdc8c0df89fd08362e3918972316\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\transition-28.0.0.aar\4118cdc8c0df89fd08362e3918972316\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:viewpager:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\1c3890e47744ce302d12d47eb30dfafb\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:viewpager:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\1c3890e47744ce302d12d47eb30dfafb\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\b1a15330d64363293fe921f653dc9e16\AndroidManifest.xml:20:5-44
@@ -220,6 +237,8 @@ MERGED from [android.arch.persistence:db-framework:1.1.1] C:\Users\helmiligi\.gr
 MERGED from [android.arch.persistence:db-framework:1.1.1] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\db-framework-1.1.1.aar\5462007bf8001e1b4b9149e13e4a1d11\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.persistence:db:1.1.1] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\db-1.1.1.aar\027c3cee5c3e804962b7da8b1523c2f0\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.persistence:db:1.1.1] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\db-1.1.1.aar\027c3cee5c3e804962b7da8b1523c2f0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\cardview-v7-28.0.0.aar\971fe10bb9f857b98f5b29b4f14a91e5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\cardview-v7-28.0.0.aar\971fe10bb9f857b98f5b29b4f14a91e5\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:documentfile:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\4b939c2d503b4b7bbfef9839f0b70b06\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:documentfile:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\4b939c2d503b4b7bbfef9839f0b70b06\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\helmiligi\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\5505ea0e3794b07b05041e250a47cd7f\AndroidManifest.xml:20:5-44
