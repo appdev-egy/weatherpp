@@ -38,7 +38,7 @@ import java.util.concurrent.TimeUnit;
  * Provides an API for doing all operations with the server data
  */
 public class WeatherNetworkDataSource {
-    // The number of days we want our API to return, set to 14 days or two weeks
+    // The number of days we want our API to return, set to 5 days or two weeks
     public static final int NUM_DAYS = 5;
     private static final String LOG_TAG = WeatherNetworkDataSource.class.getSimpleName();
 
