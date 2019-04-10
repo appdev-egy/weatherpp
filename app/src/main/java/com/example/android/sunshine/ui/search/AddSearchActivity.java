@@ -1,5 +1,6 @@
 package com.example.android.sunshine.ui.search;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
@@ -10,6 +11,7 @@ import android.widget.ListView;
 import android.widget.SearchView;
 
 import com.example.android.sunshine.R;
+import com.example.android.sunshine.ui.list.MainActivity;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -42,7 +44,9 @@ public class AddSearchActivity extends AppCompatActivity implements SearchView.O
                 CityItem xx = (CityItem) mListView.getItemAtPosition(position);
 
                 Log.d("selectedcity", "Selected -> " + xx.getName());
-
+                Intent intent = new Intent(AddSearchActivity.this, MainActivity.class);
+                intent.putExtra("cityname",xx.getName());
+                startActivity(intent);
             }
         });
 

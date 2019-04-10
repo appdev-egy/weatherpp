@@ -30,6 +30,7 @@ import java.util.Scanner;
  */
 final class NetworkUtils {
 
+
     private static final String TAG = NetworkUtils.class.getSimpleName();
 
     /*
@@ -47,9 +48,9 @@ final class NetworkUtils {
             "https://andfun-weather.udacity.com/weather";
 
     private static final String STATIC_WEATHER_URL =
-            "https://api.openweathermap.org/data/2.5/forecast?q=London,uk&units=metric&appid=18b6a811bc089d7b71cde862f2c743e4";
+            "https://api.openweathermap.org/data/2.5/forecast?q=XXXX&units=metric&appid=18b6a811bc089d7b71cde862f2c743e4";
 
-    private static final String FORECAST_BASE_URL = STATIC_WEATHER_URL;
+    private static String FORECAST_BASE_URL;
 
     /*
      * NOTE: These values only effect responses from OpenWeatherMap, NOT from the fake weather
@@ -79,9 +80,10 @@ final class NetworkUtils {
      *
      * @return URL to query weather service
      */
-    static URL getUrl() {
-        String locationQuery = "Mountain View, CA";
+    static URL getUrl(String locationQuery) {
+        //String locationQuery = "Mountain View, CA";
         //return buildUrlWithLocationQuery(locationQuery);
+        FORECAST_BASE_URL = STATIC_WEATHER_URL.replace("XXXX",locationQuery);
          try {
             URL weatherQueryUrl = new URL(FORECAST_BASE_URL);
             return weatherQueryUrl;

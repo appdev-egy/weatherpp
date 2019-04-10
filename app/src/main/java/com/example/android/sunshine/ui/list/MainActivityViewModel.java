@@ -15,9 +15,9 @@ public class MainActivityViewModel extends ViewModel {
 
     private final SunshineRepository mRepository;
 
-    public MainActivityViewModel(SunshineRepository repository) {
+    public MainActivityViewModel(SunshineRepository repository, String cityname) {
         mRepository = repository;
-        mForecast = mRepository.getCurrentWeatherForecasts();;
+        mForecast = mRepository.getCurrentWeatherForecasts(cityname);;
     }
 
     public LiveData<List<WeatherEntry>> getForecast() {

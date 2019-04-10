@@ -64,8 +64,8 @@ public class SunshineRepository {
     }
 
 
-    public LiveData<List<WeatherEntry>> getCurrentWeatherForecasts() {
-        initializeData();
+    public LiveData<List<WeatherEntry>> getCurrentWeatherForecasts(String cityname) {
+        initializeData(cityname);
         Date today = SunshineDateUtils.getNormalizedUtcDateForToday();
         return mWeatherDao.getCurrentWeatherForecasts(today);
     }
@@ -90,7 +90,7 @@ public class SunshineRepository {
      * Creates periodic sync tasks and checks to see if an immediate sync is required. If an
      * immediate sync is required, this method will take care of making sure that sync occurs.
      */
-    private synchronized void initializeData() {
+    private synchronized void initializeData(String cityname) {
 
         // Only perform initialization once per app lifetime. If initialization has already been
         // performed, we have nothing to do in this method.
@@ -99,7 +99,7 @@ public class SunshineRepository {
 
         mExecutors.diskIO().execute(() -> {
             if (isFetchNeeded()) {
-                startFetchWeatherService();
+                startFetchWeatherService(cityname);
             }
         });
     }
@@ -120,8 +120,8 @@ public class SunshineRepository {
     }
 
 
-    public LiveData<WeatherEntry> getWeatherByDate(Date date){
-        initializeData();
+    public LiveData<WeatherEntry> getWeatherByDate(Date date, String cityname){
+        initializeData(cityname);
        return mWeatherDao.getWeatherByDate(date);
     }
 
@@ -142,9 +142,9 @@ public class SunshineRepository {
      * Network related operation
      */
 
-  private void startFetchWeatherService() {
+  private void startFetchWeatherService(String cityname) {
 
-        mWeatherNetworkDataSource.startFetchWeatherService();
+        mWeatherNetworkDataSource.startFetchWeatherService(cityname);
     }
 
 }

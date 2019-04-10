@@ -42,11 +42,19 @@ public class MainActivity extends AppCompatActivity implements
     private int mPosition = RecyclerView.NO_POSITION;
     private ProgressBar mLoadingIndicator;
     private MainActivityViewModel mViewModel;
+    String cityname;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forecast);
 
+        Intent fromsearch = getIntent();
+
+        if (fromsearch != null){
+
+            cityname = fromsearch.getStringExtra("cityname");
+
+        }
         /*
          * Using findViewById, we get a reference to our RecyclerView from xml. This allows us to
          * do things like set the adapter of the RecyclerView and toggle the visibility.
@@ -113,7 +121,8 @@ public class MainActivity extends AppCompatActivity implements
         /* Setting the adapter attaches it to the RecyclerView in our layout. */
         mRecyclerView.setAdapter(mForecastAdapter);
 
-        MainViewModelFactory factory = InjectorUtils.provideMainActivityViewModelFactory(this.getApplicationContext());
+        if (cityname.isEmpty()) cityname = "London,UK";
+        MainViewModelFactory factory = InjectorUtils.provideMainActivityViewModelFactory(this.getApplicationContext(), cityname);
         mViewModel = ViewModelProviders.of(this, factory).get(MainActivityViewModel.class);
 
         mViewModel.getForecast().observe(this, weatherEntries -> {

@@ -86,8 +86,9 @@ public class WeatherNetworkDataSource {
     /**
      * Starts an intent service to fetch the weather.
      */
-    public void startFetchWeatherService() {
+    public void startFetchWeatherService(String cityname) {
         Intent intentToFetch = new Intent(mContext, SunshineSyncIntentService.class);
+        intentToFetch.putExtra("cityname",cityname);
         mContext.startService(intentToFetch);
         Log.d(LOG_TAG, "Service created");
     }
@@ -147,7 +148,7 @@ public class WeatherNetworkDataSource {
     /**
      * Gets the newest weather
      */
-    void fetchWeather() {
+    void fetchWeather(String city_name) {
         Log.d(LOG_TAG, "Fetch weather started");
         mExecutors.networkIO().execute(() -> {
             try {
@@ -156,7 +157,7 @@ public class WeatherNetworkDataSource {
                 // weather. It will decide whether to create a URL based off of the latitude and
                 // longitude or off of a simple location as a String.
 
-                URL weatherRequestUrl = NetworkUtils.getUrl();
+                URL weatherRequestUrl = NetworkUtils.getUrl(city_name);
 
                 // Use the URL to retrieve the JSON
                 String jsonWeatherResponse = NetworkUtils.getResponseFromHttpUrl(weatherRequestUrl);

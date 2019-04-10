@@ -38,7 +38,7 @@ public class SunshineSyncIntentService extends IntentService {
     protected void onHandleIntent(Intent intent) {
         Log.d(LOG_TAG, "Intent service started");
         WeatherNetworkDataSource networkDataSource = InjectorUtils.provideNetworkDataSource(this.getApplicationContext());
-        networkDataSource.fetchWeather();
+        networkDataSource.fetchWeather(intent.getStringExtra("cityname"));
 
     }
 }

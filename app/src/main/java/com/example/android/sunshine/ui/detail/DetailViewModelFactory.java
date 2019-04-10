@@ -32,16 +32,17 @@ public class DetailViewModelFactory extends ViewModelProvider.NewInstanceFactory
 
     private final SunshineRepository mRepository;
     private final Date mDate;
+    private final String mcityname;
 
-
-    public DetailViewModelFactory(SunshineRepository repository, Date date) {
+    public DetailViewModelFactory(SunshineRepository repository, Date date, String cityname) {
         this.mRepository = repository;
         this.mDate = date;
+        this.mcityname = cityname;
     }
 
     @Override
     public <T extends ViewModel> T create(Class<T> modelClass) {
         //noinspection unchecked
-        return (T) new DetailActivityViewModel(mRepository, mDate);
+        return (T) new DetailActivityViewModel(mRepository, mDate, mcityname);
     }
 }

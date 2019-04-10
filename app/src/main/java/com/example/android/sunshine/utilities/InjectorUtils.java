@@ -45,14 +45,14 @@ public class InjectorUtils {
         return WeatherNetworkDataSource.getInstance(context.getApplicationContext(), executors);
     }
 
-    public static DetailViewModelFactory provideDetailViewModelFactory(Context context, Date date) {
+    public static DetailViewModelFactory provideDetailViewModelFactory(Context context, Date date, String cityname) {
         SunshineRepository repository = provideRepository(context.getApplicationContext());
-        return new DetailViewModelFactory(repository, date);
+        return new DetailViewModelFactory(repository, date, cityname);
     }
 
-    public static MainViewModelFactory provideMainActivityViewModelFactory(Context context) {
+    public static MainViewModelFactory provideMainActivityViewModelFactory(Context context, String cityname) {
         SunshineRepository repository = provideRepository(context.getApplicationContext());
-        return new MainViewModelFactory(repository);
+        return new MainViewModelFactory(repository, cityname);
     }
 
 }
