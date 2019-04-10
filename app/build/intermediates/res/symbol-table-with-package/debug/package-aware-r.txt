@@ -1167,6 +1167,7 @@ id beginning
 id blocking
 id bottom
 id buttonPanel
+id button_save
 id buttontest
 id center
 id center_horizontal
@@ -1519,6 +1520,7 @@ string abc_toolbar_collapse_description
 string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
+string btn_save
 string character_counter_content_description
 string character_counter_pattern
 string condition_2xx

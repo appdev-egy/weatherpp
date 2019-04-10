@@ -39,6 +39,7 @@
 
     <!-- Title of the DetailActivity -->
     <string name="title_activity_detail">Details</string>
+    <string name="btn_save">Add City</string>
 
 
     <!-- - - - - - - - - - - - - - -
