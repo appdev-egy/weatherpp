@@ -1168,7 +1168,6 @@ id blocking
 id bottom
 id buttonPanel
 id button_save
-id buttontest
 id center
 id center_horizontal
 id center_vertical

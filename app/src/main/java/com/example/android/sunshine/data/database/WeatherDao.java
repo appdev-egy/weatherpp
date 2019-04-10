@@ -20,6 +20,7 @@ public interface WeatherDao {
     @Query("SELECT * FROM weather WHERE date = :date")
     LiveData<WeatherEntry> getWeatherByDate(Date date);
 
+    // Need to check the city name -- bug
     @Query("SELECT COUNT(id) FROM weather WHERE date >= :date")
     int countAllFutureWeather(Date date);
 

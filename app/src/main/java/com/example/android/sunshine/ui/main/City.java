@@ -1,7 +1,5 @@
 package com.example.android.sunshine.ui.main;
 
-import android.util.Log;
-
 import java.util.ArrayList;
 
 public class City {
@@ -24,11 +22,17 @@ public class City {
     private static int lastCityId = 0;
 
     public static ArrayList<City> createCityList(int numcities) {
+
+
         ArrayList<City> cities = new ArrayList<City>();
-        for (int i = 1; i <= numcities; i++) {
-            cities.add(new City("City name" + ++lastCityId, i ));
-            Log.d("cities", "City name" + ++lastCityId +" --  " + i +10);
-        }
+        // Dummy Data
+            cities.add(new City("London, UK", 0 ));
+            cities.add(new City("Vancouver, CA", 0 ));
+            cities.add(new City("Alisal, US", 0 ));
+            cities.add(new City("Cap-Haitien, HT", 0 ));
+            cities.add(new City("Seattle, US", 0 ));
+
+
 
         return cities;
     }

@@ -9,20 +9,19 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
-import android.widget.Button;
 
 import com.example.android.sunshine.R;
-import com.example.android.sunshine.ui.list.MainActivity;
 import com.example.android.sunshine.ui.search.AddSearchActivity;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class CityMainActivity extends Activity {
-    Button btnTest;
+
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
     ArrayList<City> cities;
+
 
 
 
@@ -32,16 +31,7 @@ public class CityMainActivity extends Activity {
         getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
         setContentView(R.layout.activity_city_main);
 
-        btnTest = (Button)findViewById(R.id.buttontest);
 
-
-        btnTest.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(CityMainActivity.this, MainActivity.class);
-                startActivity(intent);
-            }
-        });
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -73,6 +63,8 @@ public class CityMainActivity extends Activity {
         // use a linear layout manager
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
+
+
 
     }
 

@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity implements
     private ProgressBar mLoadingIndicator;
     private MainActivityViewModel mViewModel;
     String cityname;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +54,8 @@ public class MainActivity extends AppCompatActivity implements
         if (fromsearch != null){
 
             cityname = fromsearch.getStringExtra("cityname");
+
+        } else {
 
         }
         /*
@@ -121,7 +124,7 @@ public class MainActivity extends AppCompatActivity implements
         /* Setting the adapter attaches it to the RecyclerView in our layout. */
         mRecyclerView.setAdapter(mForecastAdapter);
 
-        if (cityname.isEmpty()) cityname = "London,UK";
+        //if (cityname.isEmpty()) cityname = "London,UK";
         MainViewModelFactory factory = InjectorUtils.provideMainActivityViewModelFactory(this.getApplicationContext(), cityname);
         mViewModel = ViewModelProviders.of(this, factory).get(MainActivityViewModel.class);
 
