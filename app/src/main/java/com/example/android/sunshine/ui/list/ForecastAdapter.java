@@ -155,14 +155,14 @@ class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.ForecastAdapt
         /*************************
          * Low (min) temperature *
          *************************/
-        double lowInCelsius = currentWeather.getMin();
+        //double lowInCelsius = currentWeather.getMin();
          /*
           * If the user's preference for weather is fahrenheit, formatTemperature will convert
           * the temperature. This method will also append either °C or °F to the temperature
           * String.
           */
-        String lowString = SunshineWeatherUtils.formatTemperature(mContext, lowInCelsius);
-        String lowA11y = mContext.getString(R.string.a11y_low_temp, lowString);
+        //String lowString = SunshineWeatherUtils.formatTemperature(mContext, lowInCelsius);
+        //String lowA11y = mContext.getString(R.string.a11y_low_temp, lowString);
 
          /* Set the text and content description (for accessibility purposes) */
         //forecastAdapterViewHolder.lowTempView.setText(lowString);

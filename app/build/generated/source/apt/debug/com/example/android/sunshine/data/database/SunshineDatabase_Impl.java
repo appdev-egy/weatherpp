@@ -26,13 +26,13 @@ public class SunshineDatabase_Impl extends SunshineDatabase {
 
   @Override
   protected SupportSQLiteOpenHelper createOpenHelper(DatabaseConfiguration configuration) {
-    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(1) {
+    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(2) {
       @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `weather` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `weatherIconId` INTEGER NOT NULL, `date` INTEGER, `min` REAL NOT NULL, `max` REAL NOT NULL, `humidity` REAL NOT NULL, `pressure` REAL NOT NULL, `wind` REAL NOT NULL, `degrees` REAL NOT NULL)");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `weather` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `weatherIconId` INTEGER NOT NULL, `date` INTEGER, `city` TEXT, `max` REAL NOT NULL, `humidity` REAL NOT NULL, `pressure` REAL NOT NULL, `wind` REAL NOT NULL, `degrees` REAL NOT NULL)");
         _db.execSQL("CREATE UNIQUE INDEX `index_weather_date` ON `weather` (`date`)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"9db8aa03c94807e7c867e1d94a9e0114\")");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"4bf40b48f96f645769d0b6c62a620d8c\")");
       }
 
       @Override
@@ -66,7 +66,7 @@ public class SunshineDatabase_Impl extends SunshineDatabase {
         _columnsWeather.put("id", new TableInfo.Column("id", "INTEGER", true, 1));
         _columnsWeather.put("weatherIconId", new TableInfo.Column("weatherIconId", "INTEGER", true, 0));
         _columnsWeather.put("date", new TableInfo.Column("date", "INTEGER", false, 0));
-        _columnsWeather.put("min", new TableInfo.Column("min", "REAL", true, 0));
+        _columnsWeather.put("city", new TableInfo.Column("city", "TEXT", false, 0));
         _columnsWeather.put("max", new TableInfo.Column("max", "REAL", true, 0));
         _columnsWeather.put("humidity", new TableInfo.Column("humidity", "REAL", true, 0));
         _columnsWeather.put("pressure", new TableInfo.Column("pressure", "REAL", true, 0));
@@ -83,7 +83,7 @@ public class SunshineDatabase_Impl extends SunshineDatabase {
                   + " Found:\n" + _existingWeather);
         }
       }
-    }, "9db8aa03c94807e7c867e1d94a9e0114", "23e8c00181f2568d630626c652daefdd");
+    }, "4bf40b48f96f645769d0b6c62a620d8c", "760ee8676af617af25ded010feb7b834");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)

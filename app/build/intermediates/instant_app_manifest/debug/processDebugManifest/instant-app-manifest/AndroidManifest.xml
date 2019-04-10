@@ -21,6 +21,21 @@
         android:supportsRtl="true"
         android:testOnly="true" >
         <activity
+            android:name="com.example.android.sunshine.ui.search.AddSearchActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.MaterialComponents.Light.DarkActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value=".ui.search.AddSearchActivity" />
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
             android:name="com.example.android.sunshine.ui.main.CityMainActivity"
             android:label="@string/title_activity_city_main"
             android:launchMode="singleTop"
@@ -30,15 +45,12 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- The manifest entry for our MainActivity. Each Activity requires a manifest entry -->
+        </activity> <!-- The manifest entry for our MainActivity. Each Activity requires a manifest entry -->
         <activity
             android:name="com.example.android.sunshine.ui.list.MainActivity"
             android:label="@string/app_name"
             android:launchMode="singleTop"
-            android:theme="@style/AppTheme.Forecast" >
-        </activity> <!-- The manifest entry for our DetailActivity. Each Activity requires a manifest entry -->
+            android:theme="@style/AppTheme.Forecast" /> <!-- The manifest entry for our DetailActivity. Each Activity requires a manifest entry -->
         <activity
             android:name="com.example.android.sunshine.ui.detail.DetailActivity"
             android:label="@string/title_activity_detail"

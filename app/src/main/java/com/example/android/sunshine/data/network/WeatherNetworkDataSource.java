@@ -172,8 +172,8 @@ public class WeatherNetworkDataSource {
                 if (response != null && response.getWeatherForecast().length != 0) {
                     Log.d(LOG_TAG, "JSON not null and has " + response.getWeatherForecast().length
                             + " values");
-                    Log.d(LOG_TAG, String.format("First value is %1.0f and %1.0f",
-                            response.getWeatherForecast()[0].getMin(),
+                    Log.d(LOG_TAG, String.format("First value is %1.0f ",
+                            //response.getWeatherForecast()[0].getMin(),
                             response.getWeatherForecast()[0].getMax()));
 
                     mDownloadedWeatherForecasts.postValue(response.getWeatherForecast());

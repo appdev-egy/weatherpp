@@ -30,7 +30,7 @@ public class WeatherEntry {
     private int id;
     private int weatherIconId;
     private Date date;
-    private double min;
+    private String city;
     private double max;
     private double humidity;
     private double pressure;
@@ -42,7 +42,7 @@ public class WeatherEntry {
      * converts this data to WeatherEntry objects using this constructor.
      * @param weatherIconId Image id for weather
      * @param date Date of weather
-     * @param min Min temperature
+     * @param city City name
      * @param max Max temperature
      * @param humidity Humidity for the day
      * @param pressure Barometric pressure
@@ -52,10 +52,10 @@ public class WeatherEntry {
 
 
     @Ignore
-    public WeatherEntry(int weatherIconId, Date date, double min, double max, double humidity, double pressure, double wind, double degrees) {
+    public WeatherEntry(int weatherIconId, Date date, String city, double max, double humidity, double pressure, double wind, double degrees) {
         this.weatherIconId = weatherIconId;
         this.date = date;
-        this.min = min;
+        this.city = city;
         this.max = max;
         this.humidity = humidity;
         this.pressure = pressure;
@@ -64,11 +64,11 @@ public class WeatherEntry {
     }
 
     // Constructor used by Room to create WeatherEntries
-    public WeatherEntry(int id, int weatherIconId, Date date, double min, double max, double humidity, double pressure, double wind, double degrees) {
+    public WeatherEntry(int id, int weatherIconId, Date date, String city, double max, double humidity, double pressure, double wind, double degrees) {
         this.id = id;
         this.weatherIconId = weatherIconId;
         this.date = date;
-        this.min = min;
+        this.city = city;
         this.max = max;
         this.humidity = humidity;
         this.pressure = pressure;
@@ -91,8 +91,8 @@ public class WeatherEntry {
         return weatherIconId;
     }
 
-    public double getMin() {
-        return min;
+    public String getCity() {
+        return city;
     }
 
     public double getMax() {

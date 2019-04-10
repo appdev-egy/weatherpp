@@ -1228,6 +1228,7 @@ id icon_frame
 id icon_group
 id ifRoom
 id image
+id imageView
 id imageView2
 id info
 id invisible
@@ -1241,6 +1242,7 @@ id line3
 id listMode
 id list_item
 id list_item_city_layout
+id listview_cities
 id low_temperature
 id masked
 id message
@@ -1288,6 +1290,7 @@ id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
 id scrollable
+id searchView
 id search_badge
 id search_bar
 id search_button
@@ -1351,6 +1354,7 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
+id txtName
 id uniform
 id unlabeled
 id up
@@ -1411,6 +1415,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_add_search
 layout activity_city_main
 layout activity_detail
 layout activity_forecast
@@ -1458,11 +1463,13 @@ layout preference_widget_seekbar_material
 layout preference_widget_switch
 layout preference_widget_switch_compat
 layout primary_weather_info
+layout row
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
 mipmap ic_launcher
+raw cities
 string a11y_forecast
 string a11y_forecast_icon
 string a11y_high_temp

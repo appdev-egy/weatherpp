@@ -51,7 +51,7 @@ final class OpenWeatherJsonParser {
 
     // Max temperature for the day
     private static final String OWM_MAX = "temp_max";
-    private static final String OWM_MIN = "temp_min";
+    //private static final String OWM_MIN = "temp_min";
 
     private static final String OWM_WEATHER = "weather";
     private static final String OWM_WEATHER_ID = "id";
@@ -123,16 +123,17 @@ final class OpenWeatherJsonParser {
         int weatherId = weatherchildobject.getInt(OWM_WEATHER_ID);
 
         double max = weathermainObject.getDouble(OWM_MAX);
-        double min = weathermainObject.getDouble(OWM_MIN);
-        Log.d("weather_data", "----- max " + max + " --- min " + min);
+        //double min = weathermainObject.getDouble(OWM_MIN);
+        //Log.d("weather_data", "----- max " + max + " --- min " + min);
 
         long daytime = dayForecast.getLong(OWM_DT);
         Log.d("timetag","--> " + String.valueOf(new Date(daytime * 1000)));
         //return new WeatherEntry(weatherId, new Date(daytime), max, min,
         //               humidity, pressure, windSpeed, windDirection);
 
+        String city = "city_name";
         // Create the weather entry object
-        return new WeatherEntry(weatherId, new Date(daytime * 1000), max, min,
+        return new WeatherEntry(weatherId, new Date(daytime * 1000), city, max,
                humidity, pressure, windSpeed, windDirection);
     }
 

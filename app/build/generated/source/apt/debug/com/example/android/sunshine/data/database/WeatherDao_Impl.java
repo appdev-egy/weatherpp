@@ -32,7 +32,7 @@ public class WeatherDao_Impl implements WeatherDao {
     this.__insertionAdapterOfWeatherEntry = new EntityInsertionAdapter<WeatherEntry>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR ABORT INTO `weather`(`id`,`weatherIconId`,`date`,`min`,`max`,`humidity`,`pressure`,`wind`,`degrees`) VALUES (nullif(?, 0),?,?,?,?,?,?,?,?)";
+        return "INSERT OR ABORT INTO `weather`(`id`,`weatherIconId`,`date`,`city`,`max`,`humidity`,`pressure`,`wind`,`degrees`) VALUES (nullif(?, 0),?,?,?,?,?,?,?,?)";
       }
 
       @Override
@@ -46,7 +46,11 @@ public class WeatherDao_Impl implements WeatherDao {
         } else {
           stmt.bindLong(3, _tmp);
         }
-        stmt.bindDouble(4, value.getMin());
+        if (value.getCity() == null) {
+          stmt.bindNull(4);
+        } else {
+          stmt.bindString(4, value.getCity());
+        }
         stmt.bindDouble(5, value.getMax());
         stmt.bindDouble(6, value.getHumidity());
         stmt.bindDouble(7, value.getPressure());
@@ -137,7 +141,7 @@ public class WeatherDao_Impl implements WeatherDao {
           final int _cursorIndexOfId = _cursor.getColumnIndexOrThrow("id");
           final int _cursorIndexOfWeatherIconId = _cursor.getColumnIndexOrThrow("weatherIconId");
           final int _cursorIndexOfDate = _cursor.getColumnIndexOrThrow("date");
-          final int _cursorIndexOfMin = _cursor.getColumnIndexOrThrow("min");
+          final int _cursorIndexOfCity = _cursor.getColumnIndexOrThrow("city");
           final int _cursorIndexOfMax = _cursor.getColumnIndexOrThrow("max");
           final int _cursorIndexOfHumidity = _cursor.getColumnIndexOrThrow("humidity");
           final int _cursorIndexOfPressure = _cursor.getColumnIndexOrThrow("pressure");
@@ -157,8 +161,8 @@ public class WeatherDao_Impl implements WeatherDao {
               _tmp_1 = _cursor.getLong(_cursorIndexOfDate);
             }
             _tmpDate = DateConverter.toDate(_tmp_1);
-            final double _tmpMin;
-            _tmpMin = _cursor.getDouble(_cursorIndexOfMin);
+            final String _tmpCity;
+            _tmpCity = _cursor.getString(_cursorIndexOfCity);
             final double _tmpMax;
             _tmpMax = _cursor.getDouble(_cursorIndexOfMax);
             final double _tmpHumidity;
@@ -169,7 +173,7 @@ public class WeatherDao_Impl implements WeatherDao {
             _tmpWind = _cursor.getDouble(_cursorIndexOfWind);
             final double _tmpDegrees;
             _tmpDegrees = _cursor.getDouble(_cursorIndexOfDegrees);
-            _result = new WeatherEntry(_tmpId,_tmpWeatherIconId,_tmpDate,_tmpMin,_tmpMax,_tmpHumidity,_tmpPressure,_tmpWind,_tmpDegrees);
+            _result = new WeatherEntry(_tmpId,_tmpWeatherIconId,_tmpDate,_tmpCity,_tmpMax,_tmpHumidity,_tmpPressure,_tmpWind,_tmpDegrees);
           } else {
             _result = null;
           }
@@ -244,7 +248,7 @@ public class WeatherDao_Impl implements WeatherDao {
           final int _cursorIndexOfId = _cursor.getColumnIndexOrThrow("id");
           final int _cursorIndexOfWeatherIconId = _cursor.getColumnIndexOrThrow("weatherIconId");
           final int _cursorIndexOfDate = _cursor.getColumnIndexOrThrow("date");
-          final int _cursorIndexOfMin = _cursor.getColumnIndexOrThrow("min");
+          final int _cursorIndexOfCity = _cursor.getColumnIndexOrThrow("city");
           final int _cursorIndexOfMax = _cursor.getColumnIndexOrThrow("max");
           final int _cursorIndexOfHumidity = _cursor.getColumnIndexOrThrow("humidity");
           final int _cursorIndexOfPressure = _cursor.getColumnIndexOrThrow("pressure");
@@ -265,8 +269,8 @@ public class WeatherDao_Impl implements WeatherDao {
               _tmp_1 = _cursor.getLong(_cursorIndexOfDate);
             }
             _tmpDate = DateConverter.toDate(_tmp_1);
-            final double _tmpMin;
-            _tmpMin = _cursor.getDouble(_cursorIndexOfMin);
+            final String _tmpCity;
+            _tmpCity = _cursor.getString(_cursorIndexOfCity);
             final double _tmpMax;
             _tmpMax = _cursor.getDouble(_cursorIndexOfMax);
             final double _tmpHumidity;
@@ -277,7 +281,7 @@ public class WeatherDao_Impl implements WeatherDao {
             _tmpWind = _cursor.getDouble(_cursorIndexOfWind);
             final double _tmpDegrees;
             _tmpDegrees = _cursor.getDouble(_cursorIndexOfDegrees);
-            _item = new WeatherEntry(_tmpId,_tmpWeatherIconId,_tmpDate,_tmpMin,_tmpMax,_tmpHumidity,_tmpPressure,_tmpWind,_tmpDegrees);
+            _item = new WeatherEntry(_tmpId,_tmpWeatherIconId,_tmpDate,_tmpCity,_tmpMax,_tmpHumidity,_tmpPressure,_tmpWind,_tmpDegrees);
             _result.add(_item);
           }
           return _result;

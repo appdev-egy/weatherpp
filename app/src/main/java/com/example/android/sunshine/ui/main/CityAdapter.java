@@ -15,11 +15,12 @@ import java.util.List;
 public class CityAdapter extends RecyclerView.Adapter<CityAdapter.CityViewHolder> {
 
     // Store a member variable for the cities
-    private List<City> mcities;
+    private List<City> mcities, mcities_copy;
     private final Context mContext;
-
+    City city;
     public CityAdapter(@NonNull Context context, List<City> cities) {
         mcities = cities;
+        mcities_copy = cities;
         mContext = context;
     }
 
@@ -37,7 +38,7 @@ public class CityAdapter extends RecyclerView.Adapter<CityAdapter.CityViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull CityViewHolder cityViewHolder, int i) {
-        City city = mcities.get(i);
+        city = mcities.get(i);
 
 
         TextView cityname = cityViewHolder.city_name_textView;
